@@ -1,0 +1,87 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: rgb(211, 207, 207);
+  margin: 10px;
+  cursor: pointer;
+  text-align: center;
+  
+}
+
+#app h1 {
+  margin: 30px;
+  text-decoration: underline;
+  text-transform: uppercase;
+  color: rgb(190, 10, 10);
+  font-size: 50px;
+  letter-spacing: 20px;
+  font-family: 'Big Shoulders Stencil Display', cursive;
+}
+
+p{
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+#app{
+  display: block;
+}
+
+.list {
+  margin-top: 20px;
+  text-align: center;
+  padding: 40px;
+}
+
+.list h2{
+  margin-bottom: 20px;
+  text-decoration: underline;
+}
+
+button {
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin: 5px;
+  margin-top: 30px;
+}
+
+button:hover{
+  background-color: red;
+  color: white;
+  text-transform: uppercase;
+}
+
+img{
+  text-align: center;
+  width: 100%;
+}
+
+.copyright{
+  margin-top: 30px;
+  font-size: 25px;
+}
+.copyright:hover{
+  transform: scale(1.5);
+  font-weight: bold;
+  color: blue;
+  margin-left: 5px;
+}
+
+.infos{
+  display: flex;
+  font-family: 'Big Shoulders Stencil Display', cursive;
+  font-family: 'Montaga', serif;
+  font-size: 15px;
+}
+
+@media screen and (min-width: 800px){
+  .infos{
+    font-size: 25px;
+    transition: 1s;
+    justify-content: space-between;
+  }
+}

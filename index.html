@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <!-- PWA -->
+     <link rel="manifest" href="manifest.json" />
+     <!-- ios support -->
+     <link rel="apple-touch-icon" href="images/icons/icon-72x72.png" />
+     <link rel="apple-touch-icon" href="images/icons/icon-96x96.png" />
+     <link rel="apple-touch-icon" href="images/icons/icon-128x128.png" />
+     <link rel="apple-touch-icon" href="images/icons/icon-144x144.png" />
+     <link rel="apple-touch-icon" href="images/icons/icon-152x152.png" />
+     <link rel="apple-touch-icon" href="images/icons/icon-192x192.png" />
+     <link rel="apple-touch-icon" href="images/icons/icon-384x384.png" />
+     <link rel="apple-touch-icon" href="images/icons/icon-512x512.png" />
+     <meta name="apple-mobile-web-app-status-bar" content="#db4938" />
+     <meta name="theme-color" content="#db4938" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid19</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@500&family=Montaga&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="app">
+        <h1>Covid 19</h1>
+        <p>Get all the latest Infos about the Corona Virus</p>
+        <img src="covid19.jpeg" alt="">
+        <button @click='getCountryData()'>Get Countries</button>
+        <button @click='confirmedData()'>Confirmed Cases</button>
+        <button @click='deathData()'>Death Cases</button>
+        <div class="infos">
+          <ol class="list">
+            <h2>Country</h2>
+              <li v-for="count in countries">
+                  {{count.country}}
+              </li>
+          </ol>
+          <ol class="list">
+            <h2>Confirmed</h2>
+              <li v-for="confirm in confirmed">
+                  {{confirm.confirmed}}
+              </li>
+          </ol>
+          <ol class="list">
+            <h2>Death</h2>
+              <li v-for="death in deaths">
+                  {{death.deaths}}
+              </li>
+          </ol>
+        </div>
+    </div>
+    <p class="copyright">Copyright &copy; By Sam Jartouh 2021</p>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="script/script.js"></script>
+    <!-- PWA SCRIPT -->
+    <script>
+        window.addEventListener('load', () => {
+          registerSW();
+        });
+  
+        // Register the Service Worker
+        async function registerSW() {
+          if ('serviceWorker' in navigator) {
+            try {
+              await navigator.serviceWorker.register('serviceWorker.js');
+            } catch (e) {
+              console.log('SW registration failed');
+            }
+          }
+        }
+      </script>
+</body>
+</html>

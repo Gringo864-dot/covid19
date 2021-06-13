@@ -1,0 +1,17 @@
+{
+  "name": "Covid19",
+  "short_name": "Covid19",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#5900b3",
+  "theme_color": "black",
+  "scope": ".",
+  "description": "The Ultimate Corona Update for U.",
+  "icons": [
+    {
+      "src": "icon.png",
+      "sizes": "1280x1280",
+      "type": "image/png"
+    }
+  ]
+}
