@@ -33,8 +33,9 @@ p{
 
 .list {
   margin-top: 20px;
-  text-align: center;
-  padding: 25px;
+  text-align: left;
+  padding: 15px 15px 0 25px;
+  font-size: 15px;
 }
 
 .list h2{
